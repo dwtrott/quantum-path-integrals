@@ -1,0 +1,14 @@
+name = "QuantumPathIntegrals"
+version = "0.1.0"
+defaultTargets = ["QuantumPathIntegrals"]
+
+# Mathlib is pinned to the commit tagged v4.35.0, which matches the toolchain
+# and the pin used by OscInt v0.7.0 (thomas-falk-research/lean-oscillatory).
+# OscInt is not yet a dependency; it is added when a result first needs it.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "QuantumPathIntegrals"

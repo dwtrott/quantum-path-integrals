@@ -1,0 +1,22 @@
+name: Lean build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reject sorry and admit in project source
+        run: |
+          if grep -rnwE 'sorry|admit' --include='*.lean' QuantumPathIntegrals QuantumPathIntegrals.lean; then
+            echo "Found sorry or admit in project source."
+            exit 1
+          fi
+
+      - name: Build with Lake (restores the Mathlib cache)
+        uses: leanprover/lean-action@v1
