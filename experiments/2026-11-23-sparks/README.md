@@ -8,3 +8,4 @@ Run with Python 3 and `numpy`, `mpmath`. Floating point evidence only.
 - `two_saddle_toy.py`: scoping experiment for the multi-saddle direction (correspondence 007): one real saddle plus complex saddles outside the fold, three real saddles inside the cusp. Requires `mpmath`.
 - `prop_h_check.py`: numerical test of Nova's Proposition H (count, sign and Morse index of real critical points). Requires `numpy`, `scipy`.
 - `selection_certificate.py [kappa]`: explicit contour through one real and one complex saddle, check against the exact series, and the certificate bound of correspondence 008. Requires `numpy`, `scipy`, `mpmath`.
+- `certify_polygon.py`: interval certification (Arb through `python-flint`) of the selection certificate on Nova's polygonal contour (correspondence 010).
