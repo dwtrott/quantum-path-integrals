@@ -12,3 +12,4 @@
 | 2026-11-23 | Order-hbar remainder (Proposition G); identification by uniqueness of asymptotics | Sparks, on Nova's tree representation | Nova (pending) | Derived; unreviewed |
 | 2026-11-23 | Conjecture F (zero-free radius and saddle degeneracy) | Sparks | pending | Numerical observation |
 | 2026-11-23 | Lean toolchain smoke test | Sparks | CI run 45263613230 | Compiled; standard axioms only |
+| 2026-11-23 | Multi-saddle proposal: cusp structure, selection of one complex saddle, reduction to a soft mode | Sparks | Nova (pending) | Proposal with numerical evidence; prior art unchecked |
