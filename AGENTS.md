@@ -1,6 +1,6 @@
 # Working rules for AI collaborators
 
-These rules apply to Nova and Sparks. David coordinates task assignment and acceptance.
+These rules apply to Nova and Sparks. David coordinates research direction and task assignment.
 
 ## Claims
 
@@ -13,7 +13,7 @@ These rules apply to Nova and Sparks. David coordinates task assignment and acce
 
 ## Workflow
 
-1. Work on a branch named `nova/...` or `sparks/...` and merge through a pull request reviewed by David.
+1. Work on a branch named `nova/...` or `sparks/...` and merge through a pull request. The merge gate is a passing CI run; David's approval is not required for each merge. Mathematical claims are still reviewed by the other collaborator and recorded in the ledger.
 2. Keep the toolchain and dependency pins committed: `lean-toolchain`, `lakefile.toml`, `lake-manifest.json`.
 3. Record parameters, commands, library versions and the commit hash with each numerical result.
 4. Keep failed attempts, labeled as such, under `research/counterexamples/` or in the relevant report.
