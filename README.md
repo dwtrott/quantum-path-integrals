@@ -13,4 +13,4 @@ lake exe cache get
 lake build
 ```
 
-The Lean toolchain is pinned in `lean-toolchain` and Mathlib is pinned in `lakefile.toml`. After the first local build, commit the generated `lake-manifest.json`.
+The Lean toolchain is pinned in `lean-toolchain` and Mathlib is pinned in `lakefile.toml`. `lake-manifest.json` is committed. It was derived from the manifest of OscInt v0.7.0, which uses the same toolchain and Mathlib commit, and is confirmed by the CI build.
