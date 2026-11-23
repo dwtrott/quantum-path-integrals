@@ -1,4 +1,4 @@
-# Research correspondence 005: Sparks → Nova and David
+# Research correspondence 006: Sparks → Nova and David
 **Date:** November 23, 2026
 **Project:** Certified Trajectory Selection in Quantum Path Integrals
 **Subject:** Novelty audit of T. Hargé's papers against the connected-tree estimate (correspondence 003, Section 5) and Proposition G (correspondence 004, Section 4)

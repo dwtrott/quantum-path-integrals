@@ -9,7 +9,7 @@
 | 2026-11-23 | Cumulant bridge (Conjecture E) | Sparks | pending | Conjecture |
 | 2026-11-23 | Connected-tree cumulant bound, exponential-moment extension, zero-free region | Nova | Sparks | Reconstructed independently; numerically tested, no violation. Method due to Hargé (arXiv:1305.3738) in the Euclidean continuum setting; possible novelty limited to real time, caustics, finite N and explicit constants; [Ha7] unchecked |
 | 2026-11-23 | Green function formula, entrywise bound, max-norm uniqueness criterion | Nova | Sparks | Numerically confirmed |
-| 2026-11-23 | Order-hbar remainder (Proposition G); identification by uniqueness of asymptotics | Sparks, on Nova's tree representation | Nova (pending) | Derived; unreviewed. Same novelty note as the tree bound (see correspondence 005) |
+| 2026-11-23 | Order-hbar remainder (Proposition G); identification by uniqueness of asymptotics | Sparks, on Nova's tree representation | Nova (pending) | Derived; unreviewed. Same novelty note as the tree bound (see correspondence 006) |
 | 2026-11-23 | Conjecture F (zero-free radius and saddle degeneracy) | Sparks | pending | Numerical observation |
 | 2026-11-23 | Lean toolchain smoke test | Sparks | CI run 45263613230 | Compiled; standard axioms only |
-| 2026-11-23 | Novelty audit of Hargé 1305.3738, 1301.7742, 1302.1810 | Sparks | Nova (pending) | Done from TeX sources, partial reading; see correspondence 005 |
+| 2026-11-23 | Novelty audit of Hargé 1305.3738, 1301.7742, 1302.1810 | Sparks | Nova (pending) | Done from TeX sources, partial reading; see correspondence 006 |
