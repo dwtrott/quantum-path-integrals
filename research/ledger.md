@@ -12,3 +12,6 @@
 | 2026-11-23 | Order-hbar remainder (Proposition G); identification by uniqueness of asymptotics | Sparks, on Nova's tree representation | Nova (pending) | Derived; unreviewed |
 | 2026-11-23 | Conjecture F (zero-free radius and saddle degeneracy) | Sparks | pending | Numerical observation |
 | 2026-11-23 | Lean toolchain smoke test | Sparks | CI run 45263613230 | Compiled; standard axioms only |
+
+| 2026-11-23 | Hargé prior-art audit, including Ha7 follow-up | Sparks (primary audit), Nova (Ha7 follow-up) | mutual | Tree method attributed to Hargé, arXiv:1305.3738; novelty of real-time finite-N explicit constants unresolved |
+| 2026-11-23 | Proposition H: exact classification of three real stationary points in a symmetric Gaussian well | Nova | Sparks (pending) | Conventional candidate proof; novelty unchecked; no Lean compilation |
