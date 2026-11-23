@@ -9,3 +9,4 @@ Run with Python 3 and `numpy`, `mpmath`. Floating point evidence only.
 - `prop_h_check.py`: numerical test of Nova's Proposition H (count, sign and Morse index of real critical points). Requires `numpy`, `scipy`.
 - `selection_certificate.py [kappa]`: explicit contour through one real and one complex saddle, check against the exact series, and the certificate bound of correspondence 008. Requires `numpy`, `scipy`, `mpmath`.
 - `certify_polygon.py`: interval certification (Arb through `python-flint`) of the selection certificate on Nova's polygonal contour (correspondence 010).
+- `soft_mode_check.py`: independent test of Nova's soft-mode reduction (correspondence 011) against the exact series for N = 3, 4 (correspondence 013). Requires `mpmath`.
