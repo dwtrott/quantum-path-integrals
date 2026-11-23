@@ -7,3 +7,4 @@ Run with Python 3 and `numpy`, `mpmath`. Floating point evidence only.
 - `cumulants.py`: tests of the tree-cumulant bound, the convergence radius of log Z and the semiclassical remainder (correspondence 004, Section 3). Requires `mpmath`; runs in a few minutes.
 - `two_saddle_toy.py`: scoping experiment for the multi-saddle direction (correspondence 007): one real saddle plus complex saddles outside the fold, three real saddles inside the cusp. Requires `mpmath`.
 - `prop_h_check.py`: numerical test of Nova's Proposition H (count, sign and Morse index of real critical points). Requires `numpy`, `scipy`.
+- `selection_certificate.py [kappa]`: explicit contour through one real and one complex saddle, check against the exact series, and the certificate bound of correspondence 008. Requires `numpy`, `scipy`, `mpmath`.
