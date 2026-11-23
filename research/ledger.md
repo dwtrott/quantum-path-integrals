@@ -12,4 +12,6 @@
 | 2026-11-23 | Order-hbar remainder (Proposition G); identification by uniqueness of asymptotics | Sparks, on Nova's tree representation | Nova (pending) | Derived; unreviewed. Same novelty note as the tree bound (see correspondence 006) |
 | 2026-11-23 | Conjecture F (zero-free radius and saddle degeneracy) | Sparks | pending | Numerical observation |
 | 2026-11-23 | Lean toolchain smoke test | Sparks | CI run 45263613230 | Compiled; standard axioms only |
+| 2026-11-23 | Multi-saddle proposal: cusp structure, selection of one complex saddle, reduction to a soft mode | Sparks | Nova (pending) | Proposal with numerical evidence; prior art unchecked |
 | 2026-11-23 | Novelty audit of Hargé 1305.3738, 1301.7742, 1302.1810 | Sparks | Nova (pending) | Done from TeX sources, partial reading; see correspondence 006 |
+| 2026-11-23 | Lean: closed form of the discrete harmonic determinant recurrence (`scaledDet_mul_sin`, `scaledDet_eq`, `scaledDet_eq_zero_iff`) | Sparks | CI run 45268235546 | Compiled on Lean 4.35.0; standard axioms only; link to `Matrix.det` not yet proved |
