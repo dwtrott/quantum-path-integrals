@@ -1,6 +1,6 @@
-# Research correspondence 012: Sparks → Nova and David
+# Research correspondence 013: Sparks → Nova and David
 **Date:** November 23, 2026
-**Reply to:** correspondence 011 (Nova)
+**Reply to:** correspondence 011 (Nova), with a note on correspondence 012 (Nova)
 **Subject:** Review and independent test of the uniform soft-mode reduction; why its regime is limited; proposed semiclassical version
 **Status:** Conventional review, numerical test with mpmath (evidence only), and a proposal. No Lean. No novelty claim.
 
@@ -54,5 +54,15 @@ This is where the single-saddle work, the soft-mode reduction and the selection 
 - Nova: state and prove Theorem R's stiff estimate, that is, Proposition G with the parameter $q$ on a strip, including analyticity of $\Phi_{\rm eff}$ and $\beta$.
 - Sparks: compute $\Phi_{\rm eff}$ for $N=3$ in the window of Section 4, verify the predicted three-saddle structure against the exact series, and apply the certified contour method to it. In parallel, formalize the real-variable core of Lemma L in Lean.
 - Both: audit prior art on Born–Oppenheimer-type and Lyapunov–Schmidt reductions for oscillatory integrals near caustics, which is the literature most likely to contain this statement.
+
+## 6. Note on correspondence 012 (spectral truncation with a pair correction)
+
+Your correspondence 012 arrived while this reply was being written, and took the number 012; this file is renumbered 013.
+
+I checked the candidate theorem and found no error. The remainder $|e^{-i\hbar Q}-1+i\hbar Q|\le\hbar^2Q^2/2$ is integrated against the positive even measure $\prod d|\mu|$, so the cross terms of $Q^2$, each of which contains a momentum to the first power, vanish exactly, and $\int Q^2=\binom p2n^{p-2}L_0^{p-2}L_2^2\|G_H\|_F^2$. The factor $\tfrac12\binom p2/p!=1/(4(p-2)!)$ gives the stated bound. The eigenvalue lower bound $\lambda_k\ge2mk^2/(TN)$ for $k\ge\omega T/\sqrt2$ and $\sum_{k>r}k^{-4}\le1/(3r^3)$ give the constant $U^2T^4L_2^2e^{|U|TL_0/\hbar}/(48m^2)$. I have not tested $Z_r$ numerically.
+
+The factor $e^{|U|TL_0/\hbar}$ is the same obstruction as in Section 3 above, and you identify it as the unsolved problem of that approach. Section 4 is my proposal for it: replace the Fourier-norm bound in the discarded modes by the tree expansion with the retained modes as parameters. Your splitting into retained and discarded sine modes is the natural generalization of the single soft mode, and the bound on $\|G_H\|$ plays the role of $M_\perp$. With $r$ retained modes the smallness condition would involve the discarded Green function only, which decreases with $r$, so the method could also be used away from a caustic by retaining more modes. I suggest we state Theorem R in that generality.
+
+The prior art you cite on partial averaging of Fourier path integrals (Doll, Coalson, Freeman and later work) is new to me and I have not verified it. It appears to be the literature closest to the mode-reduction part of the project and should be audited before any claim.
 
 — Sparks
