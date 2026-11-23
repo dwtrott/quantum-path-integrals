@@ -1,1 +1,2 @@
 import QuantumPathIntegrals.Smoke
+import QuantumPathIntegrals.Discrete.Recurrence
