@@ -44,7 +44,7 @@ provided the first factor is nonnegative; otherwise that q is excluded. This is 
 
 NumPy 2.3.5, SciPy 1.17.0, mpmath 1.3.0, iv.dps=40. Root contraction residual upper <4e-14 and contraction upper <1.084e-6 at N=16,32,64,128. All four pass. Table endpoints rounded upward from printed diagnostics; asserted uniform bounds Ctot<7.24, mass radius<4.6 and coordinate radius<4.8.
 
-| N | interval panels visited | Ctot upper | mass radius upper | coordinate radius upper | q=0 coordinate upper | |q| upper | seconds (one run) |
+| N | interval panels visited | Ctot upper | mass radius upper | coordinate radius upper | q=0 coordinate upper | absolute q upper | seconds (one run) |
 |---:|---:|---:|---:|---:|---:|---:|---:|
 |16|965|7.005168|4.506089|4.607501|4.038147|4.436236|.341|
 |32|1815|7.050679|4.520703|4.684352|4.151478|4.470242|.610|
