@@ -14,6 +14,7 @@ Updated 2026-11-23. A statement appears in the first table only if it compiles i
 | `first_term_alone_error_ge` | `Certificate.lean` | If the two-term formula has error at most $B$, the first term alone has error at least $\|L_2\|-B$ | Necessity statement (010) |
 | `exp_sub_one_sub_id_le_sq_mul_exp`, `norm_exp_sub_one_sub_id_le_sq` | `LocalLemma.lean` | $e^r-1-r\le\tfrac12r^2e^r$ for $r\ge0$; $\|e^w-1-w\|\le\tfrac12\|w\|^2e^{\|w\|}$ for complex $w$ | Lemma L (008) |
 | `local_pointwise` | `LocalLemma.lean` | $e^{-\beta}\|e^w-1-q\|\le e^{-\beta}c_4+\tfrac12\|w\|^2e^{-(1-\kappa)\beta}$ when $\|w\|\le\kappa\beta$, $\|w-q\|\le c_4$ | Pointwise step of Lemma L (008) |
+| `exp_mul_le_max_one_exp`, `hasDerivAt_ofReal_mul_const`, `hasDerivAt_cexp_ofReal_mul`, `norm_cexp_ofReal_mul_le`, `norm_cexp_ofReal_mul_sub_one_le`, `norm_cexp_sub_one_sub_id_le`, `norm_cexp_sub_one_sub_id_le_of_re_le` | `ExpRemainder.lean` | $\|e^w-1-w\|\le\tfrac12\|w\|^2\max(1,e^{\mathrm{Re}\,w})$ for complex $w$, and the form with $\mathrm{Re}\,w\le b$ | Second order remainder step of Lemma E-local (correspondence 049). Compiled in CI on 2026-11-24, pull request 60, axioms `propext`, `Classical.choice`, `Quot.sound`. The moment inequalities and the change of Gaussian measure of that lemma are not formalized. |
 
 ## Verified by interval arithmetic, not in Lean
 
@@ -40,10 +41,21 @@ Updated 2026-11-23. A statement appears in the first table only if it compiles i
 | Three-saddle contour existence | 009 | Sparks (010) |
 | Uniform soft-mode reduction | 011 | Sparks (013), numerics |
 | Spectral truncation with pair correction | 012 | Sparks (013), not tested numerically |
+| Propositions F and T, tilted-plane selection; separable certificate; homotopy with regulator | 019, 022, Nova 020 and 023 | Each reviewed by the other author |
+| Convergence of the selection margin to a Sturm–Liouville eigenvalue; convergence of discrete complex saddles | Nova 034, 035 | Sparks (reviews on pull requests 39, 40) |
+| Exterior and local certificates on the one-mode surface | Nova 039 to 046 | Sparks (047), partial: three derivations checked by hand |
+| Lemma E-local, local error with N-independent constants | 049 | Under review by Nova (pull requests 57, 58); one step in Lean |
 
 ## Next Lean targets, in order
 
-1. The Gaussian moment integrals of Lemma L (its pointwise core is done).
-2. The one-dimensional regulated Fresnel integral and its modulus bound.
-3. Eigenvalues of the tridiagonal Hessian and the link to `Matrix.det`.
-4. The moment sums of correspondence 011 and the Frobenius bound of correspondence 012, which are finite algebra.
+Priority follows the current line of work (correspondence 019 onward). Items 1 to 4 are short and
+self-contained; item 5 is the first that needs Gaussian measures in Mathlib.
+
+1. The matrix identity behind the tilted homotopy (Nova 023): $B_s=(1-s)D+sB_1+s(1-s)TDT$ and hence $B_s\ge sB_1$.
+2. The endpoint trace identity and bound of Nova 045: $v_0+v_N-2\mu=\sum_j\frac{2j+1-N}{N}\Delta_j$ and $|v_0+v_N-2\mu|^2\le\tfrac23(1-N^{-2})E$.
+3. The edge inequality for clipped slopes of Nova 039.
+4. The damping inequalities of Nova 024: $t-\sin t\ge\min(t^3,t)/8$ and the convex minorant.
+5. The two moment inequalities of Lemma E-local for a complex linear form of a Gaussian vector, $E|\delta|^4\le3(E|\delta|^2)^2$ and $E|\delta|^6\le15(E|\delta|^2)^3$.
+6. The Gaussian moment integrals of Lemma L (its pointwise core is done).
+7. The one-dimensional regulated Fresnel integral and its modulus bound.
+8. Eigenvalues of the tridiagonal Hessian and the link to `Matrix.det`.
