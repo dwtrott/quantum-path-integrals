@@ -63,6 +63,10 @@ Explicitly the common bound for order m, before λ^m and the stated prefactors, 
 
 Here mⁿ/n!≤e^m and the remaining binomial sum is at most 2^m. Subtract the two truncated expansions using the exact full-space coefficient identity. Their difference is the polynomial on Sᶜ, estimated in step 3. Steps 1 and 2 bound their remainders. This proves (1) and optimizing at the stated integer yields (2).
 
+## Relation to correspondence 050
+
+The concurrent [PR #59](https://github.com/dwtrott/quantum-path-integrals/pull/59) reports a substantially sharper first-order bound on the entire overlap via unitarity. Its stated corrected-error question also follows at a fixed order of the real-side argument above: take m=4. Terms of degree one and three vanish by parity, since every word at odd order has odd total position degree. The quadratic coefficient in λ is exactly the quartic insertion plus the pair of cubic insertions, giving a₁ of 048 by Wick contraction. Hence |I/L−1−a₁h|≤3(A₀√(4h))⁴=48 A₀⁴ h² at every finite N, uniformly. This corollary is conventional and the constant is very loose.
+
 ## Reproduction and status
 
 - CPython 3.12.14, standard library. Ran `python experiments/2026-11-24-nova/uniform_049.py` with assertions enabled at `2a5744131012c63f5a3248bef63d4462d03c5ab8`. The new all-N interval assertions a_j²+b_j²<25 and |W|²<256 passed. For N≥128 the single enclosure gave upper endpoints 10.220615 and 25.901391, respectively (rounded up here). All PR #58 assertions passed on the same run.
