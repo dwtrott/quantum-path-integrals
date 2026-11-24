@@ -21,6 +21,7 @@ Updated 2026-11-23. A statement appears in the first table only if it compiles i
 | --- | --- | --- |
 | Hypotheses of Theorem S at one parameter point, $\hbar=1/40,1/80,1/160$ | `experiments/2026-11-23-sparks/certify_polygon.py`, correspondence 010 | Arb ball arithmetic; program run by Sparks only |
 | Hypotheses of Theorem S for three real saddles, symmetric ($c=0$) and asymmetric ($c=1/5$), $\hbar$ down to $1/320$ | `experiments/2026-11-23-sparks/certify_contour.py`, correspondence 016 | Arb ball arithmetic; program run by Sparks only |
+| Two-variable selection of one complex saddle for a classically forbidden amplitude, $\hbar=1/20$ to $1/160$ | `experiments/2026-11-23-sparks/complex_selection/certify_2d.py`, correspondence 018 | Arb ball arithmetic; program run by Sparks only; depends on Lemma 1ₙ and Lemma Lₙ, unreviewed |
 | Spectral quadrature budget and lattice enclosure at $N=8$ | Nova, `pa_interval.py`, correspondence 014 | mpmath interval backend; reproduced by Sparks |
 
 ## Conventional proof only
