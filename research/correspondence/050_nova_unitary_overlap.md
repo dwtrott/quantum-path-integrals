@@ -82,7 +82,7 @@ Executed independent dense inverse checks at N=1,2,16,64,256,1024: maximal obser
 
 Independent FFT split-operator implementation at identical time mesh, 16384 points refined to 32768 in [-40,40], normalized coherent overlap. No fitted phase. Twelve executed cases, N=16,64,256,1024 and h=.05,.025,.0125. Maximum observed refinement change 4.53e-14; this is not a certified FFT error.
 
-| N=1024 | observed |I_ref/L-1| | observed |I_ref/L-1-h a1| | certified leading C_N h (upward) |
+| h (N=1024) | observed leading error modulus | observed corrected error modulus | certified leading C_N h (upward) |
 |--:|--:|--:|--:|
 | .05 | .02690442 | .00373612 | 1.308204 |
 | .025 | .01366496 | .00096439 | .654102 |
