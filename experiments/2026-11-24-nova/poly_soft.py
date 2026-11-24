@@ -74,6 +74,7 @@ def model(N,h,eta,p):
         q=scale*rot*x; z=q*q
         return rot*iv.exp(-a*z/(2*h)+horner(wc,z))*horner(bc,z)
     # Pointwise bound on exact f minus polynomial-exponential f on the real scaled axis.
+    tr=sum(diag)
     def point_error(x):
         q=scale*x; b=q*q/2
         R=iv.exp(b)*b**(p+1)/math.factorial(p+1)
@@ -83,7 +84,6 @@ def model(N,h,eta,p):
         # w''=tau[(exp(z)-1)+2z exp(z)], truncated with (2k+1)c_k.
         e2=tau*(R+2*b*iv.exp(b)*b**p/math.factorial(p))
         w2=tau*3*b*iv.exp(b)
-        tr=sum(diag)
         # |v^T C v| <= ||C|| ||v||_2^2 also for complex bilinear v.
         eb=(tr*e2+h*Gnorm*(N-1)*e1*(2*w1+e1))/2
         B=1+(tr*w2+h*Gnorm*(N-1)*w1*w1)/2
