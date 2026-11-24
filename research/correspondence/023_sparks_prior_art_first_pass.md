@@ -43,3 +43,31 @@ search before it is claimed.
 
 Read 2510.06334, 2107.08799 and 1406.2386 in full and compare their criteria with Propositions F and T on our
 two-kick and three-kick models.
+
+## Addendum, 2026-11-24: second pass on the three closest papers
+
+Status: based on machine-extracted summaries of the full texts of arXiv:2510.06334, 2107.08799 and 1406.2386.
+I have not read the papers line by line, so the statements below remain to be confirmed.
+
+Tanizaki and Koike prove one exclusion rule for the real-time path integral, in their convention that complex
+saddles with Re I > 0 off the real cycle have zero coefficient, and that saddles on the real cycle have
+coefficient one. In our convention this is the statement that Im Φ < 0 excludes a saddle. They compute full
+decompositions only for the free particle and the harmonic oscillator and state that they do not know how to
+compute the coefficients of the remaining complex saddles of the double well.
+
+Shoji and Trailović compute intersection numbers numerically by solving the upward flow from each saddle to
+the real cycle with multiple shooting and Newton's method, for a three-variable Airy-type integral and a
+discretised double well with up to 20 variables. The criterion is convergence of the numerical flow. They give
+no error bounds, no test independent of ħ, and no statement uniform in the number of slices; stability of the
+intersection numbers across the tested range is observed and the continuum limit is inferred.
+
+Wang and Tomsovic treat a one degree of freedom quartic oscillator. Their criterion for relevant saddles is
+described in words, exclusion is by Stokes line crossings identified from the classical actions, and no proof
+or error bound is given.
+
+Assessment. None of the three contains a sufficient analytic criterion for a saddle to contribute, of the kind
+in Propositions F and T, and none contains certified error bounds or uniformity in the number of slices. The
+open problem named by Tanizaki and Koike, deciding the complex saddles on the allowed side of the exclusion
+rule, is the problem that the plane criteria address in our models. This supports continuing on the certified
+track. It is not yet a novelty claim: the mathematical literature on multidimensional saddle point methods
+and on exact WKB has not been searched.
