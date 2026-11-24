@@ -24,15 +24,15 @@ def certify(N):
   Z=C(X,0);w=W(Z);wp=-Z*w
   def hess(a,b):
    v=Z+c*interval(a,b);return (-3*c*c*(v*v-1)*W(v)).imag
-  assert hess(-r,r)>lower,(N,z,'near',hess(-r,r),lower)
+  assert hess(-r,r).a>lower.b,(N,z,'near',hess(-r,r),lower)
   M=iv.exp((t*X)**2/(2*(1-t*t)))
   tail=-6*((M+abs(w))/R**2+abs(c*wp)/R)
-  assert tail>lower,(N,z,'tail',tail,lower)
+  assert tail.a>lower.b,(N,z,'tail',tail,lower)
   stack=[(-R,-r),(r,R)];n=0
   while stack:
    a,b=stack.pop();u=interval(a,b)
    val=2*(-3*(W(Z+c*u)-w-c*u*wp)).imag/(u*u)
-   if val>lower:n+=1;continue
+   if val.a>lower.b:n+=1;continue
    assert b-a>2**-32,(N,z,a,b,val,lower)
    m=(a+b)/2;stack.extend([(a,m),(m,b)])
   ell.append(lower);counts.append(n)
@@ -41,7 +41,7 @@ def certify(N):
  for j,e in enumerate(ell):
   end=j in (0,N);a=(2*t/d)*(1 if end else 2)+(1-t*t if end else 0)+d*(I(1)/2 if end else 1)*(e-mu)
   P=a if P is None else a-off*off/P
-  assert P>0,(N,j,P)
+  assert P.a>0,(N,j,P)
  # actual eig lower approx diagnostic
  dd=2/N;wf=weights;diag=2*.1/dd*np.r_[1,np.full(N-1,2),1]+.99*np.r_[1,np.zeros(N-1),1]+dd*wf*np.array([float(e.mid) for e in ell]);offf=-2*.1/dd/np.sqrt((dd*wf[:-1])*(dd*wf[1:]));ev=eigh_tridiagonal(diag/(dd*wf),offf,select='i',select_range=(0,0))[0][0]
  print(N,'panels',sum(counts),'min ell',min(float(e.mid) for e in ell),'eig diagnostic',ev,'last pivot',P,'x width',xs[-1].delta,flush=True)
