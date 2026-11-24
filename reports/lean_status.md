@@ -12,12 +12,16 @@ Updated 2026-11-23. A statement appears in the first table only if it compiles i
 | `sum_inv_sq_sub_one_eq`, `sum_inv_sq_sub_one_le` | `Discrete/SpectralGap.lean` | $\sum_{k=2}^{n+1}1/(k^2-1)=3/4-(2n+3)/(2(n+1)(n+2))\le3/4$ | Constant in $M\le3T/(8m)$ (011, Section 3) |
 | `certificate_sum`, `certificate_two` | `Certificate.lean` | Logical assembly of the selection certificate from local bounds and a tail bound | Theorem S (008) |
 | `first_term_alone_error_ge` | `Certificate.lean` | If the two-term formula has error at most $B$, the first term alone has error at least $\|L_2\|-B$ | Necessity statement (010) |
+| `exp_sub_one_sub_id_le_sq_mul_exp`, `norm_exp_sub_one_sub_id_le_sq` | `LocalLemma.lean` | $e^r-1-r\le\tfrac12r^2e^r$ for $r\ge0$; $\|e^w-1-w\|\le\tfrac12\|w\|^2e^{\|w\|}$ for complex $w$ | Lemma L (008) |
+| `local_pointwise` | `LocalLemma.lean` | $e^{-\beta}\|e^w-1-q\|\le e^{-\beta}c_4+\tfrac12\|w\|^2e^{-(1-\kappa)\beta}$ when $\|w\|\le\kappa\beta$, $\|w-q\|\le c_4$ | Pointwise step of Lemma L (008) |
 
 ## Verified by interval arithmetic, not in Lean
 
 | Item | Where | Remark |
 | --- | --- | --- |
 | Hypotheses of Theorem S at one parameter point, $\hbar=1/40,1/80,1/160$ | `experiments/2026-11-23-sparks/certify_polygon.py`, correspondence 010 | Arb ball arithmetic; program run by Sparks only |
+| Hypotheses of Theorem S for three real saddles, symmetric ($c=0$) and asymmetric ($c=1/5$), $\hbar$ down to $1/320$ | `experiments/2026-11-23-sparks/certify_contour.py`, correspondence 016 | Arb ball arithmetic; program run by Sparks only |
+| Spectral quadrature budget and lattice enclosure at $N=8$ | Nova, `pa_interval.py`, correspondence 014 | mpmath interval backend; reproduced by Sparks |
 
 ## Conventional proof only
 
@@ -38,7 +42,7 @@ Updated 2026-11-23. A statement appears in the first table only if it compiles i
 
 ## Next Lean targets, in order
 
-1. The real-variable core of Lemma L.
+1. The Gaussian moment integrals of Lemma L (its pointwise core is done).
 2. The one-dimensional regulated Fresnel integral and its modulus bound.
 3. Eigenvalues of the tridiagonal Hessian and the link to `Matrix.det`.
 4. The moment sums of correspondence 011 and the Frobenius bound of correspondence 012, which are finite algebra.
