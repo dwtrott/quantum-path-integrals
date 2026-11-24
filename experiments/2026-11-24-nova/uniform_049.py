@@ -103,6 +103,8 @@ def large(n0,steps):
             vals.append((aa.sq()+bb.sq()).h)
         return vals, (av-b).sq()+(bv+a).sq()
     left,den=solve(cs)
+    print('large max |L_j| squared / W squared upper',max(left),den.h)
+    assert max(left)<25 and den.h<256
     right,_=solve(reversed(cs))
     # Pointwise Green bound (i<=j); tighter than multiplying global maxima.
     running=0.
@@ -145,6 +147,7 @@ def finite(n):
             out.append(a.sq()+b.sq())
         return out,(av-b).sq()+(bv+a).sq()
     l,den=solve(c)
+    assert max(z.h for z in l)<25 and den.h<256
     r,_=solve(c[::-1])
     total,prefix=I(0),I(0)
     for lj,rj in zip(l,r[::-1]):
