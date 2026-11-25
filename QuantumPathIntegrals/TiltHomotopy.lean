@@ -70,7 +70,7 @@ theorem sum_sq_centered (c : ℤ) (n : ℕ) :
 
 /-- `3 ∑_{j<N} (2 j + 1 - N)² = N (N² - 1)`, the constant of the endpoint trace bound of Nova 045. -/
 theorem sum_sq_endpoint_weights (N : ℕ) :
-    3 * ∑ j ∈ Finset.range N, (2 * (j : ℤ) + 1 - N) ^ 2 = N * (N ^ 2 - 1) := by
+    3 * ∑ j ∈ Finset.range N, (2 * (j : ℤ) + 1 - (N : ℤ)) ^ 2 = (N : ℤ) * ((N : ℤ) ^ 2 - 1) := by
   rw [sum_sq_centered]
   ring
 
