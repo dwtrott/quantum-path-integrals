@@ -3,3 +3,5 @@ import QuantumPathIntegrals.Discrete.Recurrence
 import QuantumPathIntegrals.Discrete.SpectralGap
 import QuantumPathIntegrals.Certificate
 import QuantumPathIntegrals.LocalLemma
+import QuantumPathIntegrals.ExpRemainder
+import QuantumPathIntegrals.TiltHomotopy
